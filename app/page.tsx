@@ -8,7 +8,7 @@ import bunnyPlease from "./animations/bunnyPlease.json";
 import bunnyYes from "./animations/bunnyYes.json";
 import bunnyPunch from "./animations/bunnyPunch.json";
 import Button from "./components/Button";
-import dynamic from "next/dynamic";
+
 
 
 
