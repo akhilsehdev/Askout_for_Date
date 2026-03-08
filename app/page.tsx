@@ -89,10 +89,10 @@ function Home() {
       <div className="home-container">
         {bunnyState === "yes" ? <div className="title">Perfecto!! Tomorrow at 7:00 PM, You and I! <br></br><br></br>Be Ready, baby!!</div> : <div className="title">Kanku, Will you please go out with me?</div>}
         <div className="animation">
-          {bunnyState === "normal" && <Lottie animationData={bunnyPleaseOptions} height={300} width={300} />}
-          {bunnyState === "cry" && <Lottie animationData={bunnyCryOptions} height={300} width={300} />}
-          {bunnyState === "yes" && <Lottie animationData={bunnyYesOptions} height={400} width={400} />}
-          {bunnyState === "punch" && <Lottie animationData={bunnyPunchOptions} height={300} width={300} />}
+          {bunnyState === "normal" && <Lottie animationData={bunnyPleaseOptions} loop style={{ width: 300, height: 300 }} />}
+          {bunnyState === "cry" && <Lottie animationData={bunnyCryOptions} loop style={{ width: 300, height: 300 }} />}
+          {bunnyState === "yes" && <Lottie animationData={bunnyYesOptions} loop style={{ width: 400, height: 400 }} />}
+          {bunnyState === "punch" && <Lottie animationData={bunnyPunchOptions} loop style={{ width: 300, height: 300 }} />}
         </div>
         {bunnyState !== "yes" && <div className="buttons">
           <button onClick={() => setBunnyState("yes")} onMouseEnter={() => setBunnyState("normal")}>Yes</button>
