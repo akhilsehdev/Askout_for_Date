@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import styled from "styled-components";
 import bunnyCry from "./animations/bunnyCry.json";
 import bunnyPlease from "./animations/bunnyPlease.json";
@@ -87,10 +87,10 @@ function Home() {
       <div className="home-container">
         {bunnyState === "yes" ? <div className="title">Perfecto!! Tomorrow at 7:00 PM, You and I! <br></br><br></br>Be Ready, baby!!</div> : <div className="title">Kanku, Will you please go out with me?</div>}
         <div className="animation">
-          {bunnyState === "normal" && <Lottie options={bunnyPleaseOptions} height={300} width={300} />}
-          {bunnyState === "cry" && <Lottie options={bunnyCryOptions} height={300} width={300} />}
-          {bunnyState === "yes" && <Lottie options={bunnyYesOptions} height={400} width={400} />}
-          {bunnyState === "punch" && <Lottie options={bunnyPunchOptions} height={300} width={300} />}
+          {bunnyState === "normal" && <Lottie animationData={bunnyPleaseOptions} height={300} width={300} />}
+          {bunnyState === "cry" && <Lottie animationData={bunnyCryOptions} height={300} width={300} />}
+          {bunnyState === "yes" && <Lottie animationData={bunnyYesOptions} height={400} width={400} />}
+          {bunnyState === "punch" && <Lottie animationData={bunnyPunchOptions} height={300} width={300} />}
         </div>
         {bunnyState !== "yes" && <div className="buttons">
           <button onClick={() => setBunnyState("yes")} onMouseEnter={() => setBunnyState("normal")}>Yes</button>
