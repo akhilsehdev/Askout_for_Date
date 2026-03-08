@@ -9,6 +9,10 @@ import bunnyYes from "./animations/bunnyYes.json";
 import bunnyPunch from "./animations/bunnyPunch.json";
 import Button from "./components/Button";
 
+
+
+
+
 const getRandomPosition = () => {
   if (typeof window !== 'undefined') {
     return ({
@@ -24,6 +28,9 @@ const getRandomPosition = () => {
 }
 
 function Home() {
+
+
+
   const bunnyCryOptions = {
     loop: true,
     autoplay: true,
@@ -77,7 +84,7 @@ function Home() {
   return (
     <StyledHome data-testid="container">
       <div className="home-container">
-        {bunnyState === "yes" ? <div className="title">Hasta la vista Baby  !!!!</div> : <div className="title">Will you go out with me?</div>}
+        {bunnyState === "yes" ? <div className="title">Perfecto!! Tomorrow at 7:00 PM, You and I! <br></br><br></br>Be Ready, baby!!</div> : <div className="title">Kanku, Will you please go out with me?</div>}
         <div className="animation">
           {bunnyState === "normal" && <Lottie options={bunnyPleaseOptions} height={300} width={300} />}
           {bunnyState === "cry" && <Lottie options={bunnyCryOptions} height={300} width={300} />}
