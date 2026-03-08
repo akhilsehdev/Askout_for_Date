@@ -4,17 +4,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import dynamic from "next/dynamic";
 
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 import bunnyCry from "./animations/bunnyCry.json";
 import bunnyPlease from "./animations/bunnyPlease.json";
 import bunnyYes from "./animations/bunnyYes.json";
 import bunnyPunch from "./animations/bunnyPunch.json";
 import Button from "./components/Button";
-
-
-
-
 
 const getRandomPosition = () => {
   if (typeof window !== 'undefined') {
@@ -31,9 +27,6 @@ const getRandomPosition = () => {
 }
 
 function Home() {
-
-
-
   const bunnyCryOptions = {
     loop: true,
     autoplay: true,
@@ -89,10 +82,10 @@ function Home() {
       <div className="home-container">
         {bunnyState === "yes" ? <div className="title">Perfecto!! Tomorrow at 7:00 PM, You and I! <br></br><br></br>Be Ready, baby!!</div> : <div className="title">Kanku, Will you please go out with me?</div>}
         <div className="animation">
-          {bunnyState === "normal" && <Lottie animationData={bunnyPleaseOptions} loop style={{ width: 300, height: 300 }} />}
-          {bunnyState === "cry" && <Lottie animationData={bunnyCryOptions} loop style={{ width: 300, height: 300 }} />}
-          {bunnyState === "yes" && <Lottie animationData={bunnyYesOptions} loop style={{ width: 400, height: 400 }} />}
-          {bunnyState === "punch" && <Lottie animationData={bunnyPunchOptions} loop style={{ width: 300, height: 300 }} />}
+          {bunnyState === "normal" && <Lottie options={bunnyPleaseOptions} height={300} width={300} />}
+          {bunnyState === "cry" && <Lottie options={bunnyCryOptions} height={300} width={300} />}
+          {bunnyState === "yes" && <Lottie options={bunnyYesOptions} height={400} width={400} />}
+          {bunnyState === "punch" && <Lottie options={bunnyPunchOptions} height={300} width={300} />}
         </div>
         {bunnyState !== "yes" && <div className="buttons">
           <button onClick={() => setBunnyState("yes")} onMouseEnter={() => setBunnyState("normal")}>Yes</button>
