@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+import Lottie from "react-lottie";
 import styled from "styled-components";
 import bunnyCry from "./animations/bunnyCry.json";
 import bunnyPlease from "./animations/bunnyPlease.json";
